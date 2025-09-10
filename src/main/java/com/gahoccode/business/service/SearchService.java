@@ -24,6 +24,7 @@ import static com.gahoccode.business.util.Constants.Business.OFFERINGS_AGGREGATE
 
 @Service
 public class SearchService {
+
     private static final Logger log = LoggerFactory.getLogger(SearchService.class);
 
     private final ElasticsearchOperations elasticsearchOperations;
@@ -82,4 +83,5 @@ public class SearchService {
                 .toList();
         return new Facet(name, facetItems);
     }
+
 }

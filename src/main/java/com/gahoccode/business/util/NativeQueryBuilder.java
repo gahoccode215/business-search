@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class NativeQueryBuilder {
+
     private static final List<QueryRule> FILTER_QUERY_RULES = List.of(
             QueryRules.STATE_QUERY,
             QueryRules.RATING_QUERY,
@@ -62,4 +63,5 @@ public class NativeQueryBuilder {
                 .flatMap(Optional::stream)
                 .toList();
     }
+
 }

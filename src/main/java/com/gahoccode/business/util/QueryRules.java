@@ -1,6 +1,7 @@
 package com.gahoccode.business.util;
 
 import java.util.List;
+import java.util.Locale;
 import java.util.Objects;
 import java.util.stream.Stream;
 
@@ -8,8 +9,6 @@ import static com.gahoccode.business.util.ElasticsearchUtil.*;
 import static com.gahoccode.business.util.Constants.Business.*;
 
 public class QueryRules {
-
-    private static final String BOOST_FIELD_FORMAT = "%s^%f";
 
     public static final QueryRule STATE_QUERY = QueryRule.of(
             srp -> Objects.nonNull(srp.state()),
@@ -50,6 +49,6 @@ public class QueryRules {
     );
 
     private static String boostField(String field, float boost){
-        return BOOST_FIELD_FORMAT.formatted(field, boost);
+        return String.format(Locale.US, "%s^%.1f", field, boost);
     }
 }
