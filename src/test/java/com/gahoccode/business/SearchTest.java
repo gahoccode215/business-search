@@ -38,11 +38,11 @@ public class SearchTest extends AbstractTest {
 
     @BeforeAll
     public void setup(){
-        var indexSetting = this.readResource("test-data/business-index-setting.json", new TypeReference<Map<String, Object>>() {
+        var indexSetting = this.readResource("business-index-setting.json", new TypeReference<Map<String, Object>>() {
         });
-        var indexMapping = this.readResource("test-data/business-index-mapping.json", new TypeReference<Map<String, Object>>() {
+        var indexMapping = this.readResource("business-index-mapping.json", new TypeReference<Map<String, Object>>() {
         });
-        var businessData = this.readResource("test-data/business-data.json", new TypeReference<List<Object>>() {
+        var businessData = this.readResource("business-data.json", new TypeReference<List<Object>>() {
         });
         var indexOperations = this.elasticsearchOperations.indexOps(Constants.Index.BUSINESS);
         indexOperations.create(indexSetting, Document.from(indexMapping));
