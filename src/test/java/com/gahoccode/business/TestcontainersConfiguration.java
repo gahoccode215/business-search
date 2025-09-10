@@ -1,4 +1,4 @@
-package com.gahoccode.business_search;
+package com.gahoccode.business;
 
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
