@@ -21,6 +21,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static com.gahoccode.business.util.Constants.Business.OFFERINGS_AGGREGATE_NAME;
+
+@Service
 public class SearchService {
     private static final Logger log = LoggerFactory.getLogger(SearchService.class);
 
